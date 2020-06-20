@@ -12,6 +12,7 @@ _C.BASEPATH = "/content"
 _C.DATA = edict()
 _C.DATA.BASE = os.path.join(_C.BASEPATH, "data")
 _C.DATA.COMP_NAME = "global-wheat-detection"
+_C.DATA.MODELS_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models")
 
 def download_kaggle_data():
     kaggle.api.authenticate()
