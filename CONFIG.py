@@ -40,8 +40,8 @@ def upload_to_kaggle(slug, title, new=False, msg="new version"):
         json.dump(meta, out)
     if new == True:
         subprocess.call(f"kaggle datasets create -p {_C.MODEL_OUTPUT_PATH}", shell=True, cwd=_C.THISPATH)
-    else:    
-        subprocess.call(f"kaggle datasets version -p {_C.MODEL_OUTPUT_PATH} -m {msg}", shell=True, cwd=_C.THISPATH)
+    else:
+        subprocess.call(f"kaggle datasets version -p {_C.MODEL_OUTPUT_PATH} -m '{msg}'", shell=True, cwd=_C.THISPATH)
 
 def init():
     if not os.path.exists(_C.MODEL_OUTPUT_PATH):
