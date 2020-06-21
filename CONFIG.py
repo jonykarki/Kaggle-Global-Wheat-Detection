@@ -1,3 +1,13 @@
+"""
+import sys, os
+if os.path.abspath(os.pardir) not in sys.path:
+    sys.path.insert(1, os.path.abspath(os.pardir))
+import CONFIG
+
+%reload_ext autoreload
+%autoreload 2
+"""
+
 import os
 import json
 import subprocess
