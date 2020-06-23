@@ -57,6 +57,7 @@ def init():
     if not os.path.exists(_C.MODEL_OUTPUT_PATH):
         os.makedirs(_C.MODEL_OUTPUT_PATH)
     download_kaggle_data()
+    subprocess.call(f"python3 -m pip install --upgrade -r requirements.txt", shell=True)
 
 if __name__ == "__main__":
     init()
