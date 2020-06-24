@@ -25,7 +25,7 @@ _C.MODEL_OUTPUT_PATH = "out"
 _C.DATA = edict()
 _C.DATA.BASE = os.path.join(_C.BASEPATH, "data")
 _C.DATA.COMP_NAME = "global-wheat-detection"
-_C.DATA.OUT_MODELS = os.path.join(_C.THISPATH, _C.MODEL_OUTPUT_PATH)
+_C.DATA.MODELS_OUT = os.path.join(_C.THISPATH, _C.MODEL_OUTPUT_PATH)
 
 
 def download_kaggle_data():
@@ -46,7 +46,7 @@ def upload_to_kaggle(slug, title, new=False, msg="new version"):
     }
     meta["id"] = f"jonykarki/{slug}"
     meta["title"] = title
-    with open(os.path.join(_C.DATA.OUT_MODELS,"dataset-metadata.json"), "w") as out:
+    with open(os.path.join(_C.DATA.MODELS_OUT,"dataset-metadata.json"), "w") as out:
         json.dump(meta, out)
     if new == True:
         subprocess.call(f"kaggle datasets create -p {_C.MODEL_OUTPUT_PATH}", shell=True, cwd=_C.THISPATH)
