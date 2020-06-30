@@ -1,3 +1,4 @@
 albumentations
-timm==0.1.26
-pycocotools==2.0.0
+timm
+pycocotools
+omegaconf
