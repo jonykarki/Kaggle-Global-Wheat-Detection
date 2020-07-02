@@ -1,7 +1,7 @@
 """
 import sys, os
 if os.path.abspath(os.pardir) not in sys.path:
-    sys.path.insert(1, os.path.abspath(os.pardir))
+    sys.path.insert(0, os.path.abspath(os.pardir))
 import CONFIG
 
 %reload_ext autoreload
