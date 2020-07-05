@@ -15,6 +15,7 @@ _C.VERBOSE = True
 _C.MODEL = CN()
 _C.MODEL.DEVICE = 'gpu'
 _C.MODEL.NUM_CLASSES = 2
+_C.MODEL.CHECKPOINT_PATH = None
 
 # -----------------------------------------------------------------------------
 # OTHERS

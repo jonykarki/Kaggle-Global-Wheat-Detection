@@ -17,6 +17,10 @@ def seed_everything(seed):
 
 def train(cfg, logger):
     seed_everything(cfg.SEED)
+    model = build_model(cfg)
+    device = cfg.MODEL.DEVICE 
+    checkpoint = cfg.MODEL.CHECKPOINT_PATH
+
 
 def main():
     parser = argparse.ArgumentParser(description="Train FasterRCNN ResNet-101 Backbone")
