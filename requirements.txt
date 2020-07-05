@@ -2,3 +2,4 @@ albumentations
 timm
 pycocotools
 omegaconf
+yacs
