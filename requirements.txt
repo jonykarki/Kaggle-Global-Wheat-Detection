@@ -3,3 +3,8 @@ timm
 pycocotools
 omegaconf
 yacs
+opencv-python
+tensorboard
+tensorboardX
+pyyaml
+webcolors
