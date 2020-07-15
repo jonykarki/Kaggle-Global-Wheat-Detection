@@ -1,0 +1,4 @@
+Fitter prepared. Device is cuda:0
+
+2020-07-15T19:51:45.036468
+LR: 0.0002
