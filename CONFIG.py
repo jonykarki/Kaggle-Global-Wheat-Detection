@@ -17,6 +17,7 @@ from easydict import EasyDict as edict
 _C = edict()
 CFG = _C
 
+# base folder paths
 _C.BASEPATH = "/content"
 _C.THISPATH = os.path.dirname(os.path.abspath(__file__))
 _C.MODEL_OUTPUT_PATH = "out"
@@ -54,6 +55,7 @@ def upload_to_kaggle(slug, title, new=False, msg="new version"):
         subprocess.call(f"kaggle datasets version -p {_C.MODEL_OUTPUT_PATH} -m '{msg}'", shell=True, cwd=_C.THISPATH)
 
 def init():
+    # check if the out folder exists
     if not os.path.exists(_C.MODEL_OUTPUT_PATH):
         os.makedirs(_C.MODEL_OUTPUT_PATH)
     download_kaggle_data()
